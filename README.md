@@ -10,7 +10,26 @@ App Expo (React Native) qui analyse toute la photothèque, directement sur l'iPh
 - Dans chaque groupe, l'app suggère la meilleure version à garder (meilleure résolution, puis meilleure netteté).
 - Suppression en lot : iOS demande confirmation, puis les éléments vont dans « Supprimés récemment ».
 
-## Lancer sur l'iPhone (sans Mac)
+## Ouvrir l'app depuis n'importe où (EAS Update)
+
+L'app est publiée sur les serveurs d'Expo. Elle s'ouvre dans Expo Go, quel que soit le réseau, même PC éteint :
+
+1. Dans Expo Go, connecte-toi avec le compte Expo propriétaire du projet (`thomasgal`).
+2. Scanne ce QR code avec l'app Appareil photo de l'iPhone :
+
+   ![QR code Expo Go](docs/expo-go-qr.png)
+
+   Lien direct : `exp://u.expo.dev/17d81bd2-4cdc-4660-acf5-ec94ac2c1551?channel-name=main&runtime-version=exposdk:58.0.0`
+
+Pour publier une nouvelle version après une modification du code :
+
+```bash
+npm run deploy
+```
+
+Le `runtimeVersion` vaut `exposdk:58.0.0` dans `app.json` : c'est la valeur qu'Expo Go accepte. En cas de passage à un autre SDK Expo, il faut la mettre à jour, ainsi que le lien ci-dessus.
+
+## Lancer en développement (même Wi-Fi)
 
 1. Sur l'iPhone, installe **Expo Go** depuis l'App Store.
 2. Sur le PC :

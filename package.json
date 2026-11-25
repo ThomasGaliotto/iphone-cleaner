@@ -10,6 +10,7 @@
     "expo-image-manipulator": "~58.0.16",
     "expo-media-library": "~58.0.14",
     "expo-status-bar": "~58.0.5",
+    "expo-updates": "~58.0.22",
     "jpeg-js": "^0.4.4",
     "react": "19.3.0",
     "react-native": "0.88.1",
@@ -26,7 +27,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "tsx scripts/test-analysis.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "npx eas-cli@latest update --channel main --platform ios --environment production --auto"
   },
   "private": true
 }
